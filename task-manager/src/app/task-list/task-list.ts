@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { signal } from '@angular/core';
 
 @Component({
   selector: 'app-task-list',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './task-list.html',
   styleUrl: './task-list.css',
 })
