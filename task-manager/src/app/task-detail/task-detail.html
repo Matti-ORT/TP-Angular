@@ -1,0 +1,21 @@
+<main class="task-detail">
+  <h1>Détails de la tâche</h1>
+  <ng-container *ngIf="task; else notFound">
+    <div class="field">
+      <label>Nom : <input [(ngModel)]="editableName" /></label>
+    </div>
+    <div class="field">
+      <label>État :
+        <input type="checkbox" [(ngModel)]="editableDone" /> Terminé
+      </label>
+    </div>
+    <div class="actions">
+      <button (click)="save()">Enregistrer</button>
+      <button (click)="cancel()">Annuler</button>
+      <button routerLink="/tasks">Retour</button>
+    </div>
+  </ng-container>
+  <ng-template #notFound>
+    <p>Tâche introuvable.</p>
+    <a routerLink="/tasks">Retour à la liste</a>
+  </ng-template>
