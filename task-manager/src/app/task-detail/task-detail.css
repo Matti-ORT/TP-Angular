@@ -1,0 +1,5 @@
+main.task-detail { padding: 1rem; max-width: 800px; }
+.task-detail .field { margin-bottom: .75rem; }
+.task-detail .field label { display:flex; gap:.5rem; align-items:center; }
+.task-detail .actions { display:flex; gap:.5rem; margin-top:1rem; }
+

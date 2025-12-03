@@ -1,8 +1,8 @@
 <h2>Liste des tâches</h2>
-<div class="task-input">
-	<input type="text" placeholder="Nouvelle tâche" [ngModel]="newTask()" (ngModelChange)="newTask.set($event)" />
-	<button (click)="addTask()" [disabled]="!newTask().trim()">Ajouter</button>
-</div>
+	<div class="task-input">
+		<input type="text" placeholder="Nouvelle tâche" [ngModel]="newTask()" (ngModelChange)="newTask.set($event)" />
+		<button class="btn" (click)="addTask()" [disabled]="!newTask().trim()">Ajouter</button>
+	</div>
 <table>
 	<thead>
 		<tr>
@@ -16,12 +16,12 @@
 			<tr [class.done]="task.done">
 				<td><a [routerLink]="['/tasks', i]">{{task.nom}}</a></td>
 				
-				<td>
-					<button (click)="doneTask(i)">{{task.done ? 'Terminé' : 'À faire'}}</button>
-				</td>
-				<td>
-					<button class="delete" (click)="deleteTask(i)" aria-label="Supprimer {{task.nom}}">✖</button>
-				</td>
+					<td>
+						<button class="btn secondary" (click)="doneTask(i)">{{task.done ? 'Terminé' : 'À faire'}}</button>
+					</td>
+					<td>
+						<button class="btn ghost" (click)="deleteTask(i)" aria-label="Supprimer {{task.nom}}">✖</button>
+					</td>
 			</tr>
 		}
 	</tbody>

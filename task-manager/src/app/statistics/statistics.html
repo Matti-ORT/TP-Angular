@@ -1,0 +1,48 @@
+<h2>Statistiques des tâches</h2>
+<p>Total : {{ total }}</p>
+
+<section class="charts">
+  <div class="chart">
+    <h3>Répartition par état (Terminé / Non)</h3>
+    <div class="bars">
+      <div *ngFor="let item of doneSeries" class="bar-line">
+        <span class="label">{{item.label}}</span>
+        <div class="bar" [style.width.%]="item.value / (total || 1) * 100"></div>
+        <span class="value">{{item.value}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart">
+    <h3>Répartition par type</h3>
+    <div class="bars">
+      <div *ngFor="let item of typeSeries" class="bar-line">
+        <span class="label">{{item.label}}</span>
+        <div class="bar" [style.width.%]="item.value / (total || 1) * 100"></div>
+        <span class="value">{{item.value}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart">
+    <h3>Répartition par priorité</h3>
+    <div class="bars">
+      <div *ngFor="let item of prioritySeries" class="bar-line">
+        <span class="label">{{item.label}}</span>
+        <div class="bar" [style.width.%]="item.value / (total || 1) * 100"></div>
+        <span class="value">{{item.value}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart">
+    <h3>Répartition par assignation</h3>
+    <div class="bars">
+      <div *ngFor="let item of assignedSeries" class="bar-line">
+        <span class="label">{{item.label}}</span>
+        <div class="bar" [style.width.%]="item.value / (total || 1) * 100"></div>
+        <span class="value">{{item.value}}</span>
+      </div>
+    </div>
+  </div>
+</section>

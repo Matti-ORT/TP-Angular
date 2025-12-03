@@ -1,0 +1,7 @@
+h2 { margin-top: 0; }
+.charts { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.chart { border: 1px solid #e5e7eb; padding: 1rem; border-radius: 8px; }
+.bar-line { display:flex; gap:0.5rem; align-items: center; margin-bottom: 0.5rem; }
+.label { width: 110px; font-size: 0.9rem; }
+.bar { height: 18px; background: linear-gradient(90deg, #60a5fa, #3b82f6); border-radius: 6px; flex-shrink: 0; }
+.value { min-width: 36px; text-align: right; }

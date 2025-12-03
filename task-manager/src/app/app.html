@@ -1,6 +1,12 @@
-<nav>
-	<a routerLink="/">Accueil</a>
-	<span> | </span>
-	<a routerLink="/tasks">Tâches</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="app-container">
+	<nav>
+		<a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+		<span> | </span>
+		<a routerLink="/tasks" routerLinkActive="active">Tâches</a>
+		<span> | </span>
+		<a routerLink="/stats" routerLinkActive="active">Statistiques</a>
+	</nav>
+	<main class="card">
+		<router-outlet></router-outlet>
+	</main>
+</div>
